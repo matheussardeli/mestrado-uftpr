@@ -62,10 +62,20 @@ const url = require('url');
         // Salvar uma captura de tela da página
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
+        await page.setViewport({ width: 1920, height: 1080 });
+
+
+
         await page.goto(siteUrl, { waitUntil: 'networkidle2' });
         const screenshotPath = path.join(dirPath, `${timestamp}-screenshot.png`);
         await page.screenshot({ path: screenshotPath, fullPage: true });
         console.log(`Screenshot salva: ${screenshotPath}`);
+
+        const pageHtml = await page.content();
+        // Salvar o código HTML completo em um arquivo
+        const htmlFileName = `${timestamp}-pagina-completa.html`;
+        fs.writeFileSync(path.join(dirPath, htmlFileName), pageHtml);
+        console.log(`HTML completo salvo em: ${path.join(dirPath, htmlFileName)}`);
 
         await browser.close();
     }
