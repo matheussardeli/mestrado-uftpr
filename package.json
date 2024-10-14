@@ -10,9 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "axios": "^1.7.7",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
+    "pupeteer": "^0.0.1",
     "puppeteer": "^22.15.0"
   }
 }

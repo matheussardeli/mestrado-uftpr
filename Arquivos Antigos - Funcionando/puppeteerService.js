@@ -28,15 +28,9 @@ async function getPageData(url) {
                 // Capturar somente os headers da seção atual
                 elements.forEach(el => {
                     const rect = el.getBoundingClientRect();
-                    const nextElement = el.nextElementSibling; // Pega o próximo elemento abaixo do header
-
-                    // Captura o texto do parágrafo abaixo do header, se existir
-                    const paragraphText = nextElement && nextElement.tagName === 'P' ? nextElement.innerText : '';
-
                     headerData.push({
                         tag: `h${i}`,
                         text: el.innerText,
-                        paragraph: paragraphText, // Texto do parágrafo abaixo do header
                         size: { width: rect.width, height: rect.height },
                         position: { top: rect.top, left: rect.left },
                         html: el.outerHTML

@@ -1,12 +1,12 @@
 module.exports = {
     urls: [
-        'https://www.uol.com.br/'
+        'https://www.uol.com.br/vivabem/noticias/deutsche-welle/2024/10/14/cientistas-acham-quantidade-inacreditavel-de-virus-em-nossas-escovas-de-dente.htm'
+        // 'https://www.google.com',
         // 'https://www.globo.com/',
-        // 'https://canaltech.com.br/',
-        // 'https://olhardigital.com.br/',
-        // 'https://www.minhavida.com.br/',
-        // 'https://www.tuasaude.com/'
+        // 'https://www.tecmundo.com.br/',
+        // 'https://www.cnnbrasil.com.br/',
+        // 'https://g1.globo.com/',
+        // 'https://www.bbc.com/portuguese'
     ],
-    geminiApiKey: 'AIzaSyCdXSpNi80UtPXwtUl-EYRyFUtrKRhXFUM',
-    geminiApiUrl: 'https://api.gemini.com/label'
+    apiKey: 'AIzaSyC3F7rBSLSH5mpCjVM4O4HQ2BXlA3mfYuo'
 };
