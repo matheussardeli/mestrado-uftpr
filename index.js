@@ -26,22 +26,21 @@ const url = require('url');
 
         // Para cada seção, enviar o texto puro para a API do Gemini
         for (const section of data.sectionsData) {
-            const firstHeader = data.sectionsData[0].headers[0];
-            const firstParagraph = data.sectionsData[0].sectionHtml.match(/<p>(.*?)<\/p>/);
-
-            if (firstParagraph ) {
+            const text = section.headers.map(header => header.text).join(' ');
+            if (text) {
                 try {
                     // Envia o texto para a API do Gemini
-                    //const geminiResponse = await sendToGemini(paragraph);
+                    console.log(text)
+
+                    const geminiResponse = await sendToGemini(text);
 
                     // Nome do arquivo para armazenar a resposta
                     const responseFileName = `${timestamp}-gemini-resposta.json`;
 
-                    // Armazenar o header original e a resposta do Gemini
+                    // Armazenar o texto e a resposta do Gemini
                     const responseData = {
-                        headerOriginal: firstHeader.text,
-                        geminiHeader: 'geminiResponse',
-                        textoBase: firstHeader.text
+                        textoBase: text,
+                        respostaGemini: geminiResponse
                     };
 
                     fs.writeFileSync(
@@ -58,6 +57,7 @@ const url = require('url');
 
         // Salvar os dados extraídos em arquivos
         const dataFileName = `${timestamp}-dados.json`;
+
         fs.writeFileSync(path.join(dirPath, dataFileName), JSON.stringify(data, null, 2));
         console.log(`Dados salvos para a URL: ${siteUrl}`);
 
@@ -65,6 +65,8 @@ const url = require('url');
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.setViewport({ width: 1920, height: 1080 });
+
+
 
         await page.goto(siteUrl, { waitUntil: 'networkidle2' });
         const screenshotPath = path.join(dirPath, `${timestamp}-screenshot.png`);

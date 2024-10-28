@@ -12,7 +12,7 @@ async function sendToGemini() {
         const model = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         // Texto fixo a ser enviado para o modelo
-        const prompt = "Gere um header de acordo com o seguinte texto: Este é um parágrafo de teste para o modelo Gemini.";
+        const prompt = "Gere um header de acordo com o seguinte texto: " + ;
 
         // Enviar o prompt para o modelo e aguardar a resposta
         const result = await model.generateContent(prompt);

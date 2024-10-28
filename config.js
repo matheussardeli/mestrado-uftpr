@@ -1,6 +1,6 @@
 module.exports = {
     urls: [
-        'https://www.uol.com.br/vivabem/noticias/deutsche-welle/2024/10/14/cientistas-acham-quantidade-inacreditavel-de-virus-em-nossas-escovas-de-dente.htm'
+        'http://www.linkedin.com'
         // 'https://www.google.com',
         // 'https://www.globo.com/',
         // 'https://www.tecmundo.com.br/',

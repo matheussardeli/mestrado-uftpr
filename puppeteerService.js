@@ -20,40 +20,41 @@ async function getPageData(url) {
             const headers = [];
             const elementCount = section.querySelectorAll('*').length;
 
-            // Limpar os dados de headers a cada iteração de section
+            // Extrair os headers (h1 a h6) da seção
             for (let i = 1; i <= 6; i++) {
                 const elements = section.querySelectorAll(`h${i}`);
                 const headerData = [];
 
-                // Capturar somente os headers da seção atual
                 elements.forEach(el => {
                     const rect = el.getBoundingClientRect();
-                    const nextElement = el.nextElementSibling; // Pega o próximo elemento abaixo do header
-
-                    // Captura o texto do parágrafo abaixo do header, se existir
-                    const paragraphText = nextElement && nextElement.tagName === 'P' ? nextElement.innerText : '';
-
                     headerData.push({
                         tag: `h${i}`,
                         text: el.innerText,
-                        paragraph: paragraphText, // Texto do parágrafo abaixo do header
                         size: { width: rect.width, height: rect.height },
                         position: { top: rect.top, left: rect.left },
                         html: el.outerHTML
                     });
                 });
 
-                // Adiciona somente se houver headers para a tag hX
                 if (headerData.length > 0) {
                     headers.push(...headerData);
                 }
             }
 
-            // Armazenar os dados da seção atual
+            // Armazenar cada parágrafo individualmente em um array de paragraphs
+            const paragraphs = Array.from(section.querySelectorAll('p'))
+                .map(paragraph => paragraph.innerText);
+
+            // Concatenar o texto de todos os parágrafos como mainText
+            const mainText = paragraphs.join(' ');
+
+            // Armazenar os dados da seção, incluindo o texto principal e parágrafos individuais
             sectionsData.push({
                 sectionHtml: section.outerHTML,
                 elementCount,
-                headers, // headers relacionados apenas à section atual
+                headers,
+                mainText,     // Texto principal (todos os parágrafos concatenados)
+                paragraphs,   // Array de parágrafos individuais
                 sectionRect: {
                     width: sectionRect.width,
                     height: sectionRect.height,
