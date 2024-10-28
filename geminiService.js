@@ -6,13 +6,16 @@ console.log(apiKey);
 // Inicializa o cliente com a chave da API do Google Gemini
 const genAI = new GoogleGenerativeAI(apiKey);
 
-async function sendToGemini() {
+async function sendToGemini({ text, mainText }) {
     try {
         // Definir o modelo específico
+
         const model = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         // Texto fixo a ser enviado para o modelo
-        const prompt = "Gere um header de acordo com o seguinte texto: " + ;
+        const prompt = "Com base no texto a seguir, gere apenas um título que melhor se encaixe, levando em consideração o que está escrito: " + mainText;
+
+        console.log(prompt)
 
         // Enviar o prompt para o modelo e aguardar a resposta
         const result = await model.generateContent(prompt);

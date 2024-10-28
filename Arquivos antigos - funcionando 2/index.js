@@ -6,8 +6,6 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
-
-
 (async () => {
     for (const siteUrl of urls) {
         // Extrair o nome do domínio da URL para usar como nome da pasta
@@ -22,13 +20,6 @@ const url = require('url');
             fs.mkdirSync(dirPath);
             console.log(`Pasta criada: ${dirPath}`);
         }
-
-        const responsesFilePath = path.join(dirPath, 'gemini_responses.json');
-
-        // Inicializa o arquivo de respostas se ele ainda não existir
-                if (!fs.existsSync(responsesFilePath)) {
-                    fs.writeFileSync(responsesFilePath, JSON.stringify([])); // Cria um array vazio
-                }
 
         // Lança o navegador e extrai dados da página
         const data = await getPageData(siteUrl);
@@ -48,17 +39,15 @@ const url = require('url');
 
                     // Armazenar o texto e a resposta do Gemini
                     const responseData = {
-                        titulo: text,
-                        textoPrincipal: mainText,
+                        textoBase: text,
+                        mainText: mainText,
                         respostaGemini: geminiResponse
                     };
 
-                    // Carregar as respostas já existentes e adicionar a nova resposta
-                    const existingResponses = JSON.parse(fs.readFileSync(responsesFilePath));
-                    existingResponses.push(responseData);
-
-                    // Salvar o array atualizado no arquivo
-                    fs.writeFileSync(responsesFilePath, JSON.stringify(existingResponses, null, 2));
+                    fs.writeFileSync(
+                        path.join(dirPath, responseFileName),
+                        JSON.stringify(responseData, null, 2)
+                    );
 
                     console.log(`Resposta do Gemini salva: ${responseFileName}`);
                 } catch (error) {
@@ -69,7 +58,7 @@ const url = require('url');
 
         // Salvar os dados extraídos em arquivos
         const dataFileName = `${timestamp}-dados.json`;
-        //
+
         fs.writeFileSync(path.join(dirPath, dataFileName), JSON.stringify(data, null, 2));
         console.log(`Dados salvos para a URL: ${siteUrl}`);
 
