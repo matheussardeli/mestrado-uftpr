@@ -1,62 +1,28 @@
 [
   {
     "titulo": "Bem-vindo e amplie sua rede de contatos profissionais",
-    "textoPrincipal": "Ao clicar em Continuar para se cadastrar ou entrar, você aceita o Contrato do Usuário, a Política de Privacidade e a Política de Cookies do LinkedIn. Ainda não faz parte do LinkedIn? Cadastre-se agora",
-    "respostaGemini": "## Termos e Condições do LinkedIn: Aceite antes de continuar \n"
+    "textoPrincipal": "Ainda não faz parte do LinkedIn? Cadastre-se agora Ao clicar em Continuar para se cadastrar ou entrar, você aceita o Contrato do Usuário, a Política de Privacidade e a Política de Cookies do LinkedIn.",
+    "respostaGemini": "Cadastre-se no LinkedIn\n"
   },
   {
     "titulo": "Conheça artigos colaborativos",
-    "textoPrincipal": "Estamos desbloqueando os conhecimentos da comunidade de uma nova maneira. Os especialistas adicionam estatísticas diretamente em cada artigo que começa com a ajuda da IA.",
-    "respostaGemini": "##  Inteligência Artificial Desbloqueia Conhecimento da Comunidade com Estatísticas Automatizadas \n"
-  },
-  {
-    "titulo": "Encontre o emprego ou estágio certo para você",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, forneça o texto para que eu possa gerar um título adequado. 😊 \n"
-  },
-  {
-    "titulo": "Anuncie sua vaga e alcance milhões de pessoas",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, me forneça o texto para que eu possa gerar um título adequado! 😊 \n"
+    "textoPrincipal": "Estamos desbloqueando os conhecimentos da comunidade de uma nova maneira. Os especialistas adicionam estatísticas diretamente em cada artigo que começa com a ajuda da IA."
   },
   {
     "titulo": "Conheça as melhores ferramentas de software",
     "textoPrincipal": "Conecte-se com clientes experientes para encontrar os melhores produtos para você.",
-    "respostaGemini": "## Encontre os melhores produtos com a ajuda de clientes experientes. \n"
+    "respostaGemini": "Clientes Experientes: A Chave para Boas Compras\n"
   },
   {
     "titulo": "Mantenha sua mente afiada com jogos",
-    "textoPrincipal": "Faça uma pausa e reconecte-se com sua rede com jogos rápidos diários.",
-    "respostaGemini": "## Jogos rápidos para fortalecer conexões. \n"
+    "textoPrincipal": "Faça uma pausa e reconecte-se com sua rede com jogos rápidos diários."
   },
   {
     "titulo": "Informe às pessoas certas que você está buscando emprego As conversas de hoje podem levar a oportunidades amanhã Fique por dentro das novidades do seu setor",
-    "textoPrincipal": "Com o recurso Open To Work, você pode informar a recrutadores em sigilo ou compartilhar com a comunidade do LinkedIn que está buscando novas oportunidades de emprego. Interaja com seus contatos para fortalecer os relacionamentos que podem ajudar você a dar o próximo passo na sua carreira. Desde vídeos ao vivo até stories, newsletters e muito mais, o LinkedIn oferece diversas maneiras de você ficar por dentro das novidades do seu setor.",
-    "respostaGemini": "##  LinkedIn: Encontre Novas Oportunidades e Fortaleça Sua Rede \n"
-  },
-  {
-    "titulo": "Conecte-se a pessoas que podem ajudar Aprenda as competências necessárias para avançar na sua carreira",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, me forneça o texto para que eu possa gerar um título adequado! 😊 \n"
-  },
-  {
-    "titulo": "Conecte-se a pessoas que podem ajudar Aprenda as competências necessárias para avançar na sua carreira",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, me forneça o texto para que eu possa gerar um título adequado. 😊 \n"
+    "textoPrincipal": "Com o recurso Open To Work, você pode informar a recrutadores em sigilo ou compartilhar com a comunidade do LinkedIn que está buscando novas oportunidades de emprego. Interaja com seus contatos para fortalecer os relacionamentos que podem ajudar você a dar o próximo passo na sua carreira. Desde vídeos ao vivo até stories, newsletters e muito mais, o LinkedIn oferece diversas maneiras de você ficar por dentro das novidades do seu setor."
   },
   {
     "titulo": "Para quem o LinkedIn foi feito?",
-    "textoPrincipal": "Para qualquer pessoa buscando orientação profissional.",
-    "respostaGemini": "Por favor, forneça o texto para que eu possa gerar um título adequado. \n"
-  },
-  {
-    "titulo": "Conecte-se com seus colegas de trabalho, de classe e amigos no LinkedIn.",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, me forneça o texto para que eu possa gerar um título adequado. 😊 \n"
-  },
-  {
-    "titulo": "Geral Navegar pelo LinkedIn Soluções Business Diretórios",
-    "textoPrincipal": "",
-    "respostaGemini": "Por favor, me forneça o texto para que eu possa gerar um título adequado. 😊 \n"
+    "textoPrincipal": "Para qualquer pessoa buscando orientação profissional."
   }
 ]

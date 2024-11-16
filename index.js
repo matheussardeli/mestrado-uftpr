@@ -37,7 +37,7 @@ const url = require('url');
         for (const section of data.sectionsData) {
             const text = section.headers.map(header => header.text).join(' ');
             const mainText = section.mainText;
-            if (text) {
+            if ((text) && (mainText)) {
                 try {
                     // Envia o texto para a API do Gemini
 
